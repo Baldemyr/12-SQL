@@ -130,7 +130,7 @@ const addRole = function () {
       {
         type: "number",
         message:
-          "Department ID (Administration = 1, Educator = 2, Staff = 3, Ghost = 4):",
+          "Department ID (Chapter Command Company = 1, First Company = 2, Apothicarium = 3, Second Company = 4, Support Company = 5):",
         name: "DeptID",
       },
       {
