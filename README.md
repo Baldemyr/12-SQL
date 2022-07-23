@@ -41,3 +41,6 @@ https://github.com/Baldemyr/12-SQL.git
 
 ## Image of Working App
 ![12pic1](https://user-images.githubusercontent.com/46965040/180587770-eb52bc37-56c0-49cf-a2c6-5d486abe793a.png)
+
+## Video of Working App
+https://drive.google.com/file/d/1Ex-9ElAjMC-Hn76cqQ39JyPjL6FVLs3N/view?usp=sharing
