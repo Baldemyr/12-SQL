@@ -1,4 +1,4 @@
-# 12-SQL
+# 12-SQL Employee Tracker
 
 ## General Info
 
