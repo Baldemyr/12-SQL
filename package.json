@@ -20,10 +20,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tracyewilhelm/Employee-Tracker.git"
+    "url": "git+https://github.com/Baldemyr/12-SQL.git"
   },
   "bugs": {
-    "url": "https://github.com/tracyewilhelm/Employee-Tracker/issues"
+    "url": "https://github.com/Baldemyr/12-SQl/issues"
   },
-  "homepage": "https://github.com/tracyewilhelm/Employee-Tracker#readme"
+  "homepage": "https://github.com/Baldemyr/12-SQL#readme"
 }
