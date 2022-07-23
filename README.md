@@ -38,3 +38,6 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## Git Repository
 https://github.com/Baldemyr/12-SQL.git
+
+## Image of Working App
+![12pic1](https://user-images.githubusercontent.com/46965040/180587770-eb52bc37-56c0-49cf-a2c6-5d486abe793a.png)
