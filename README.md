@@ -1,5 +1,9 @@
 # 12-SQL
 
+## General Info
+
+Create an terminal level application to help non developers interact with the company database.
+
 ## Criteria
 
 GIVEN a command-line application that accepts user input
