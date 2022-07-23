@@ -1,4 +1,4 @@
-//Import and require inquirer and mysql2; create port
+//Import and require inquirer and mysql2;
 
 const mysql = require("mysql2");
 const cTable = require("console.table");
@@ -26,18 +26,16 @@ const init = function () {
       },
     ])
     .then((response) => {
-      // Connect to database - create a connection object
+      // Connect to database and create an object to connect.
       if(!db) {
      db = mysql.createConnection(
         {
           host: "localhost",
-          // MySQL username,
           user: "root",
-          // MySQL password - my password is "password"
           password: "Silversnail12",
-          database: "hogwarts_db",
+          database: "Argus_db",
         },
-        console.log(`Connected to the hogwarts_db database.`)
+        console.log(`Connected to the Argus_db database.`)
       );
       }
      if (response.option === "View all departments") {
@@ -57,13 +55,12 @@ const init = function () {
       } else {
         console.log("goodbye");
         process.exit();
-        // goodbye();
       }
     });
 };
 //function to view the departments
+ // Query the department's table
 const viewDepts = function () {
-  // Query the department's table
   console.log("viewdepartments")
   db.query("SELECT * FROM departments", function (err, results) {
     console.table(results);
@@ -71,9 +68,8 @@ const viewDepts = function () {
     init();
   });
 };
-
+ // Query the roles' table
 const viewRoles = function () {
-  // Query the roles' table
   db.query(
     "SELECT roles.job_title, roles.role_id, roles.salary, departments.department_name FROM roles JOIN departments ON roles.department_id = departments.department_id;",
     function (err, results) {
@@ -87,9 +83,9 @@ const viewRoles = function () {
   );
 };
 
+// Query the employees table
 const viewEmps = function () {
-  // Query the employees table
-  db.query(
+    db.query(
     "SELECT employees.employee_id, employees.first_name, employees.last_name, employees.manager_id, roles.job_title, roles.salary, departments.department_name  FROM employees JOIN roles ON employees.role_id = roles.role_id JOIN departments ON roles.department_id = departments.department_id;",
     function (err, results) {
       console.table(results);
@@ -116,7 +112,7 @@ const addDept = function () {
         },
         function (error) {
           if (error) throw error;
-          console.log("new department added");
+          console.log("New department added");
         }
       );
       viewDepts();
@@ -134,7 +130,7 @@ const addRole = function () {
       {
         type: "number",
         message:
-          "Department ID (Administration = 1, Educator = 2, Staff = 3, Ghost = 4):",
+          "Department ID (Chapter Command Company = 1, First Company = 2, Apothicarium = 3, Second Company = 4, Support Company = 5):",
         name: "DeptID",
       },
       {
@@ -225,7 +221,7 @@ const updateEmp = function () {
       .prompt([
         {
           type: "list",
-          message: "which employee would you like to update:",
+          message: "which employee would you like to update?",
           choices: empArray,
           name: "empChoice",
         },
